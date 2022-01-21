@@ -1,5 +1,5 @@
 import "./App.css";
-import ReactPost from "./ReactPost";
+import ReactPost from "./components/ReactPost";
 
 export default function App() {
   let data = [
@@ -52,11 +52,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Bulletin Board</h1>
-      <ul>
-        {data.map((list) => (
-          <ReactPost question={list.question} answer={list.answer} />
-        ))}
-      </ul>
+      <ReactPost data={data} />
     </div>
   );
 }
